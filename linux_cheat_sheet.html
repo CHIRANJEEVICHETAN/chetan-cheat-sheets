@@ -1,0 +1,4363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux Commands Cheat Sheet</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .command {
+        display: flex;
+        align-items: center;
+      }
+      .command-code {
+        flex-grow: 1;
+      }
+      .copy-button {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .title {
+        text-align: center;
+        color: red;
+        text-decoration: underline;
+      }
+      .container {
+        border: 3px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="mb-4 title">Linux Commands Cheat Sheet</h1>
+      <div class="accordion" id="commandsAccordion">
+        <!-- Start of Linux commands -->
+        <div class="card">
+          <div class="card-header" id="heading-1">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-1"
+                aria-expanded="true"
+                aria-controls="collapse-1"
+              >
+                ls
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-1"
+            class="collapse show"
+            aria-labelledby="heading-1"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> List directory contents.</p>
+              <div class="command">
+                <code class="command-code">ls</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ls')"
+                >
+                  Copy
+                </button>
+              </div>
+              <div class="command">
+                <code class="command-code">ls -l</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ls -l')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-2">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-2"
+                aria-expanded="false"
+                aria-controls="collapse-2"
+              >
+                cd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-2"
+            class="collapse"
+            aria-labelledby="heading-2"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Change directory.</p>
+              <div class="command">
+                <code class="command-code">cd /home</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('cd /home')"
+                >
+                  Copy
+                </button>
+              </div>
+              <div class="command">
+                <code class="command-code">cd ..</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('cd ..')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-3">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-3"
+                aria-expanded="false"
+                aria-controls="collapse-3"
+              >
+                pwd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-3"
+            class="collapse"
+            aria-labelledby="heading-3"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Print working directory.</p>
+              <div class="command">
+                <code class="command-code">pwd</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('pwd')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-4">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-4"
+                aria-expanded="false"
+                aria-controls="collapse-4"
+              >
+                mkdir
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-4"
+            class="collapse"
+            aria-labelledby="heading-4"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Make directories.</p>
+              <div class="command">
+                <code class="command-code">mkdir myfolder</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('mkdir myfolder')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-5">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-5"
+                aria-expanded="false"
+                aria-controls="collapse-5"
+              >
+                rmdir
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-5"
+            class="collapse"
+            aria-labelledby="heading-5"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Remove empty directories.</p>
+              <div class="command">
+                <code class="command-code">rmdir myfolder</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('rmdir myfolder')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-6">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-6"
+                aria-expanded="false"
+                aria-controls="collapse-6"
+              >
+                rm
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-6"
+            class="collapse"
+            aria-labelledby="heading-6"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Remove files or directories.</p>
+              <div class="command">
+                <code class="command-code">rm file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('rm file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+              <div class="command">
+                <code class="command-code">rm -r myfolder</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('rm -r myfolder')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-7">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-7"
+                aria-expanded="false"
+                aria-controls="collapse-7"
+              >
+                cp
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-7"
+            class="collapse"
+            aria-labelledby="heading-7"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Copy files or directories.</p>
+              <div class="command">
+                <code class="command-code">cp file1.txt file2.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('cp file1.txt file2.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-8">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-8"
+                aria-expanded="false"
+                aria-controls="collapse-8"
+              >
+                mv
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-8"
+            class="collapse"
+            aria-labelledby="heading-8"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Move or rename files or directories.
+              </p>
+              <div class="command">
+                <code class="command-code">mv oldname.txt newname.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('mv oldname.txt newname.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-9">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-9"
+                aria-expanded="false"
+                aria-controls="collapse-9"
+              >
+                touch
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-9"
+            class="collapse"
+            aria-labelledby="heading-9"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Create an empty file or update the
+                access time of a file.
+              </p>
+              <div class="command">
+                <code class="command-code">touch newfile.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('touch newfile.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-10">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-10"
+                aria-expanded="false"
+                aria-controls="collapse-10"
+              >
+                cat
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-10"
+            class="collapse"
+            aria-labelledby="heading-10"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Concatenate and display file content.
+              </p>
+              <div class="command">
+                <code class="command-code">cat file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('cat file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-11">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-11"
+                aria-expanded="false"
+                aria-controls="collapse-11"
+              >
+                less
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-11"
+            class="collapse"
+            aria-labelledby="heading-11"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> View file content one screen at a
+                time.
+              </p>
+              <div class="command">
+                <code class="command-code">less file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('less file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-12">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-12"
+                aria-expanded="false"
+                aria-controls="collapse-12"
+              >
+                head
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-12"
+            class="collapse"
+            aria-labelledby="heading-12"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Output the first part of files.</p>
+              <div class="command">
+                <code class="command-code">head -n 10 file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('head -n 10 file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-13">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-13"
+                aria-expanded="false"
+                aria-controls="collapse-13"
+              >
+                tail
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-13"
+            class="collapse"
+            aria-labelledby="heading-13"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Output the last part of files.</p>
+              <div class="command">
+                <code class="command-code">tail -n 10 file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('tail -n 10 file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-14">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-14"
+                aria-expanded="false"
+                aria-controls="collapse-14"
+              >
+                grep
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-14"
+            class="collapse"
+            aria-labelledby="heading-14"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Search text using patterns.</p>
+              <div class="command">
+                <code class="command-code">grep 'search_term' file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('grep \'search_term\' file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-15">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-15"
+                aria-expanded="false"
+                aria-controls="collapse-15"
+              >
+                find
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-15"
+            class="collapse"
+            aria-labelledby="heading-15"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Search for files in a directory
+                hierarchy.
+              </p>
+              <div class="command">
+                <code class="command-code">find /home -name file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('find /home -name file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-16">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-16"
+                aria-expanded="false"
+                aria-controls="collapse-16"
+              >
+                chmod
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-16"
+            class="collapse"
+            aria-labelledby="heading-16"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Change file mode bits (permissions).
+              </p>
+              <div class="command">
+                <code class="command-code">chmod 755 file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('chmod 755 file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-17">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-17"
+                aria-expanded="false"
+                aria-controls="collapse-17"
+              >
+                chown
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-17"
+            class="collapse"
+            aria-labelledby="heading-17"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Change file owner and group.</p>
+              <div class="command">
+                <code class="command-code">chown user:group file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('chown user:group file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-18">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-18"
+                aria-expanded="false"
+                aria-controls="collapse-18"
+              >
+                ln
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-18"
+            class="collapse"
+            aria-labelledby="heading-18"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Create hard and symbolic links.</p>
+              <div class="command">
+                <code class="command-code">ln -s source_file link_name</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ln -s source_file link_name')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-19">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-19"
+                aria-expanded="false"
+                aria-controls="collapse-19"
+              >
+                df
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-19"
+            class="collapse"
+            aria-labelledby="heading-19"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Report file system disk space usage.
+              </p>
+              <div class="command">
+                <code class="command-code">df -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('df -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-20">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-20"
+                aria-expanded="false"
+                aria-controls="collapse-20"
+              >
+                du
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-20"
+            class="collapse"
+            aria-labelledby="heading-20"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Estimate file space usage.</p>
+              <div class="command">
+                <code class="command-code">du -sh /home</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('du -sh /home')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add this after the previous 20 commands in the accordion -->
+        <div class="card">
+          <div class="card-header" id="heading-21">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-21"
+                aria-expanded="false"
+                aria-controls="collapse-21"
+              >
+                ps
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-21"
+            class="collapse"
+            aria-labelledby="heading-21"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Report a snapshot of current
+                processes.
+              </p>
+              <div class="command">
+                <code class="command-code">ps aux</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ps aux')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-22">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-22"
+                aria-expanded="false"
+                aria-controls="collapse-22"
+              >
+                top
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-22"
+            class="collapse"
+            aria-labelledby="heading-22"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Display tasks and system resource
+                usage.
+              </p>
+              <div class="command">
+                <code class="command-code">top</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('top')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-23">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-23"
+                aria-expanded="false"
+                aria-controls="collapse-23"
+              >
+                kill
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-23"
+            class="collapse"
+            aria-labelledby="heading-23"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Terminate processes by PID.</p>
+              <div class="command">
+                <code class="command-code">kill 1234</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('kill 1234')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-24">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-24"
+                aria-expanded="false"
+                aria-controls="collapse-24"
+              >
+                killall
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-24"
+            class="collapse"
+            aria-labelledby="heading-24"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Terminate processes by name.</p>
+              <div class="command">
+                <code class="command-code">killall firefox</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('killall firefox')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-25">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-25"
+                aria-expanded="false"
+                aria-controls="collapse-25"
+              >
+                bg
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-25"
+            class="collapse"
+            aria-labelledby="heading-25"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Resume suspended jobs in the
+                background.
+              </p>
+              <div class="command">
+                <code class="command-code">bg %1</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('bg %1')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-26">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-26"
+                aria-expanded="false"
+                aria-controls="collapse-26"
+              >
+                fg
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-26"
+            class="collapse"
+            aria-labelledby="heading-26"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Bring a background job to the
+                foreground.
+              </p>
+              <div class="command">
+                <code class="command-code">fg %1</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('fg %1')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-27">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-27"
+                aria-expanded="false"
+                aria-controls="collapse-27"
+              >
+                jobs
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-27"
+            class="collapse"
+            aria-labelledby="heading-27"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> List active jobs.</p>
+              <div class="command">
+                <code class="command-code">jobs</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('jobs')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-28">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-28"
+                aria-expanded="false"
+                aria-controls="collapse-28"
+              >
+                ping
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-28"
+            class="collapse"
+            aria-labelledby="heading-28"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Send ICMP ECHO_REQUEST to network
+                hosts.
+              </p>
+              <div class="command">
+                <code class="command-code">ping google.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ping google.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-29">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-29"
+                aria-expanded="false"
+                aria-controls="collapse-29"
+              >
+                wget
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-29"
+            class="collapse"
+            aria-labelledby="heading-29"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Non-interactive network downloader.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >wget http://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('wget http://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-30">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-30"
+                aria-expanded="false"
+                aria-controls="collapse-30"
+              >
+                curl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-30"
+            class="collapse"
+            aria-labelledby="heading-30"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Transfer data from or to a server.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >curl -O http://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('curl -O http://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-31">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-31"
+                aria-expanded="false"
+                aria-controls="collapse-31"
+              >
+                scp
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-31"
+            class="collapse"
+            aria-labelledby="heading-31"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Secure copy (remote file copy
+                program).
+              </p>
+              <div class="command">
+                <code class="command-code">scp file.txt user@remote:/path</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('scp file.txt user@remote:/path')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-32">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-32"
+                aria-expanded="false"
+                aria-controls="collapse-32"
+              >
+                ssh
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-32"
+            class="collapse"
+            aria-labelledby="heading-32"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> OpenSSH SSH client (remote login
+                program).
+              </p>
+              <div class="command">
+                <code class="command-code">ssh user@remote</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ssh user@remote')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-33">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-33"
+                aria-expanded="false"
+                aria-controls="collapse-33"
+              >
+                ftp
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-33"
+            class="collapse"
+            aria-labelledby="heading-33"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> File Transfer Protocol client.</p>
+              <div class="command">
+                <code class="command-code">ftp ftp.example.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ftp ftp.example.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-34">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-34"
+                aria-expanded="false"
+                aria-controls="collapse-34"
+              >
+                nano
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-34"
+            class="collapse"
+            aria-labelledby="heading-34"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Simple text editor in the terminal.
+              </p>
+              <div class="command">
+                <code class="command-code">nano file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('nano file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-35">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-35"
+                aria-expanded="false"
+                aria-controls="collapse-35"
+              >
+                vim
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-35"
+            class="collapse"
+            aria-labelledby="heading-35"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Advanced text editor.</p>
+              <div class="command">
+                <code class="command-code">vim file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('vim file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-36">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-36"
+                aria-expanded="false"
+                aria-controls="collapse-36"
+              >
+                man
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-36"
+            class="collapse"
+            aria-labelledby="heading-36"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> An interface to the system reference
+                manuals.
+              </p>
+              <div class="command">
+                <code class="command-code">man ls</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('man ls')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-37">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-37"
+                aria-expanded="false"
+                aria-controls="collapse-37"
+              >
+                alias
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-37"
+            class="collapse"
+            aria-labelledby="heading-37"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Create an alias for a command.</p>
+              <div class="command">
+                <code class="command-code">alias ll='ls -la'</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('alias ll=\'ls -la\'')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-38">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-38"
+                aria-expanded="false"
+                aria-controls="collapse-38"
+              >
+                echo
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-38"
+            class="collapse"
+            aria-labelledby="heading-38"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Display a line of text.</p>
+              <div class="command">
+                <code class="command-code">echo "Hello, World!"</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('echo Hello, World!')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-39">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-39"
+                aria-expanded="false"
+                aria-controls="collapse-39"
+              >
+                export
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-39"
+            class="collapse"
+            aria-labelledby="heading-39"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Set environment variables.</p>
+              <div class="command">
+                <code class="command-code">export PATH=$PATH:/new/path</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('export PATH=$PATH:/new/path')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-40">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-40"
+                aria-expanded="false"
+                aria-controls="collapse-40"
+              >
+                history
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-40"
+            class="collapse"
+            aria-labelledby="heading-40"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Display or manipulate the history
+                list.
+              </p>
+              <div class="command">
+                <code class="command-code">history</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('history')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-41">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-41"
+                aria-expanded="false"
+                aria-controls="collapse-41"
+              >
+                clear
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-41"
+            class="collapse"
+            aria-labelledby="heading-41"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Clear the terminal screen.</p>
+              <div class="command">
+                <code class="command-code">clear</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('clear')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-42">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-42"
+                aria-expanded="false"
+                aria-controls="collapse-42"
+              >
+                tar
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-42"
+            class="collapse"
+            aria-labelledby="heading-42"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Archive files.</p>
+              <div class="command">
+                <code class="command-code">tar -czvf archive.tar.gz /path</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('tar -czvf archive.tar.gz /path')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-43">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-43"
+                aria-expanded="false"
+                aria-controls="collapse-43"
+              >
+                gzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-43"
+            class="collapse"
+            aria-labelledby="heading-43"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Compress files.</p>
+              <div class="command">
+                <code class="command-code">gzip file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('gzip file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-44">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-44"
+                aria-expanded="false"
+                aria-controls="collapse-44"
+              >
+                gunzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-44"
+            class="collapse"
+            aria-labelledby="heading-44"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Decompress files.</p>
+              <div class="command">
+                <code class="command-code">gunzip file.txt.gz</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('gunzip file.txt.gz')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-45">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-45"
+                aria-expanded="false"
+                aria-controls="collapse-45"
+              >
+                zip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-45"
+            class="collapse"
+            aria-labelledby="heading-45"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Package and compress (archive) files.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >zip archive.zip file1.txt file2.txt</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('zip archive.zip file1.txt file2.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-46">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-46"
+                aria-expanded="false"
+                aria-controls="collapse-46"
+              >
+                unzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-46"
+            class="collapse"
+            aria-labelledby="heading-46"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Extract compressed files from a ZIP
+                archive.
+              </p>
+              <div class="command">
+                <code class="command-code">unzip archive.zip</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('unzip archive.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-47">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-47"
+                aria-expanded="false"
+                aria-controls="collapse-47"
+              >
+                df
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-47"
+            class="collapse"
+            aria-labelledby="heading-47"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Display the amount of disk space
+                available.
+              </p>
+              <div class="command">
+                <code class="command-code">df -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('df -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-48">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-48"
+                aria-expanded="false"
+                aria-controls="collapse-48"
+              >
+                mount
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-48"
+            class="collapse"
+            aria-labelledby="heading-48"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Mount a filesystem.</p>
+              <div class="command">
+                <code class="command-code">mount /dev/sdb1 /mnt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('mount /dev/sdb1 /mnt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-49">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-49"
+                aria-expanded="false"
+                aria-controls="collapse-49"
+              >
+                umount
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-49"
+            class="collapse"
+            aria-labelledby="heading-49"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Unmount a filesystem.</p>
+              <div class="command">
+                <code class="command-code">umount /mnt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('umount /mnt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-50">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-50"
+                aria-expanded="false"
+                aria-controls="collapse-50"
+              >
+                df
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-50"
+            class="collapse"
+            aria-labelledby="heading-50"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Display free disk space.</p>
+              <div class="command">
+                <code class="command-code">df -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('df -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of additional commands -->
+
+        <!-- Add this after the previous 50 commands in the accordion -->
+        <div class="card">
+          <div class="card-header" id="heading-51">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-51"
+                aria-expanded="false"
+                aria-controls="collapse-51"
+              >
+                sudo
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-51"
+            class="collapse"
+            aria-labelledby="heading-51"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Execute a command as another user,
+                typically as the superuser (root).
+              </p>
+              <div class="command">
+                <code class="command-code">sudo apt update</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo apt update')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-52">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-52"
+                aria-expanded="false"
+                aria-controls="collapse-52"
+              >
+                apt-get
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-52"
+            class="collapse"
+            aria-labelledby="heading-52"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Package handling utility for
+                Debian-based distributions.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >sudo apt-get install package_name</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo apt-get install package_name')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-53">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-53"
+                aria-expanded="false"
+                aria-controls="collapse-53"
+              >
+                yum
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-53"
+            class="collapse"
+            aria-labelledby="heading-53"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Package manager for RPM-based
+                distributions.
+              </p>
+              <div class="command">
+                <code class="command-code">sudo yum install package_name</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo yum install package_name')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-54">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-54"
+                aria-expanded="false"
+                aria-controls="collapse-54"
+              >
+                systemctl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-54"
+            class="collapse"
+            aria-labelledby="heading-54"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Control the systemd system and
+                service manager.
+              </p>
+              <div class="command">
+                <code class="command-code">systemctl status ssh</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('systemctl status ssh')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-55">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-55"
+                aria-expanded="false"
+                aria-controls="collapse-55"
+              >
+                service
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-55"
+            class="collapse"
+            aria-labelledby="heading-55"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Run a System V init script.</p>
+              <div class="command">
+                <code class="command-code">service ssh start</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('service ssh start')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-56">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-56"
+                aria-expanded="false"
+                aria-controls="collapse-56"
+              >
+                crontab
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-56"
+            class="collapse"
+            aria-labelledby="heading-56"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Schedule periodic jobs.</p>
+              <div class="command">
+                <code class="command-code">crontab -e</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('crontab -e')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-57">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-57"
+                aria-expanded="false"
+                aria-controls="collapse-57"
+              >
+                useradd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-57"
+            class="collapse"
+            aria-labelledby="heading-57"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Create a new user.</p>
+              <div class="command">
+                <code class="command-code">sudo useradd username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo useradd username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-58">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-58"
+                aria-expanded="false"
+                aria-controls="collapse-58"
+              >
+                passwd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-58"
+            class="collapse"
+            aria-labelledby="heading-58"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Change a user's password.</p>
+              <div class="command">
+                <code class="command-code">sudo passwd username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo passwd username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-59">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-59"
+                aria-expanded="false"
+                aria-controls="collapse-59"
+              >
+                usermod
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-59"
+            class="collapse"
+            aria-labelledby="heading-59"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Modify a user account.</p>
+              <div class="command">
+                <code class="command-code"
+                  >sudo usermod -aG groupname username</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo usermod -aG groupname username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-60">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-60"
+                aria-expanded="false"
+                aria-controls="collapse-60"
+              >
+                groupadd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-60"
+            class="collapse"
+            aria-labelledby="heading-60"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Create a new group.</p>
+              <div class="command">
+                <code class="command-code">sudo groupadd groupname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo groupadd groupname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-61">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-61"
+                aria-expanded="false"
+                aria-controls="collapse-61"
+              >
+                df
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-61"
+            class="collapse"
+            aria-labelledby="heading-61"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Report file system disk space usage.
+              </p>
+              <div class="command">
+                <code class="command-code">df -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('df -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-62">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-62"
+                aria-expanded="false"
+                aria-controls="collapse-62"
+              >
+                du
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-62"
+            class="collapse"
+            aria-labelledby="heading-62"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Estimate file space usage.</p>
+              <div class="command">
+                <code class="command-code">du -sh directory_name</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('du -sh directory_name')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-63">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-63"
+                aria-expanded="false"
+                aria-controls="collapse-63"
+              >
+                rsync
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-63"
+            class="collapse"
+            aria-labelledby="heading-63"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Remote file and directory
+                synchronization.
+              </p>
+              <div class="command">
+                <code class="command-code">rsync -avz source destination</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('rsync -avz source destination')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-64">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-64"
+                aria-expanded="false"
+                aria-controls="collapse-64"
+              >
+                ifconfig
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-64"
+            class="collapse"
+            aria-labelledby="heading-64"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Configure a network interface.</p>
+              <div class="command">
+                <code class="command-code">ifconfig</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ifconfig')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-65">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-65"
+                aria-expanded="false"
+                aria-controls="collapse-65"
+              >
+                ip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-65"
+            class="collapse"
+            aria-labelledby="heading-65"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Show/manipulate routing, devices,
+                policy routing, and tunnels.
+              </p>
+              <div class="command">
+                <code class="command-code">ip addr show</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ip addr show')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-66">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-66"
+                aria-expanded="false"
+                aria-controls="collapse-66"
+              >
+                netstat
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-66"
+            class="collapse"
+            aria-labelledby="heading-66"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Print network connections, routing
+                tables, interface statistics, masquerade connections, and
+                multicast memberships.
+              </p>
+              <div class="command">
+                <code class="command-code">netstat -tuln</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('netstat -tuln')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-67">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-67"
+                aria-expanded="false"
+                aria-controls="collapse-67"
+              >
+                ss
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-67"
+            class="collapse"
+            aria-labelledby="heading-67"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Utility to investigate sockets.</p>
+              <div class="command">
+                <code class="command-code">ss -tuln</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ss -tuln')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-68">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-68"
+                aria-expanded="false"
+                aria-controls="collapse-68"
+              >
+                traceroute
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-68"
+            class="collapse"
+            aria-labelledby="heading-68"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Print the route packets take to a
+                network host.
+              </p>
+              <div class="command">
+                <code class="command-code">traceroute google.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('traceroute google.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-69">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-69"
+                aria-expanded="false"
+                aria-controls="collapse-69"
+              >
+                nslookup
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-69"
+            class="collapse"
+            aria-labelledby="heading-69"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Query Internet name servers
+                interactively.
+              </p>
+              <div class="command">
+                <code class="command-code">nslookup google.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('nslookup google.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-72">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-72"
+                aria-expanded="false"
+                aria-controls="collapse-72"
+              >
+                hostname
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-72"
+            class="collapse"
+            aria-labelledby="heading-72"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Show or set the system's host name.
+              </p>
+              <div class="command">
+                <code class="command-code">hostname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('hostname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-73">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-73"
+                aria-expanded="false"
+                aria-controls="collapse-73"
+              >
+                ping
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-73"
+            class="collapse"
+            aria-labelledby="heading-73"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Send ICMP ECHO_REQUEST to network
+                hosts.
+              </p>
+              <div class="command">
+                <code class="command-code">ping google.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ping google.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-74">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-74"
+                aria-expanded="false"
+                aria-controls="collapse-74"
+              >
+                ssh
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-74"
+            class="collapse"
+            aria-labelledby="heading-74"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> OpenSSH SSH client (remote login
+                program).
+              </p>
+              <div class="command">
+                <code class="command-code">ssh username@hostname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ssh username@hostname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-75">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-75"
+                aria-expanded="false"
+                aria-controls="collapse-75"
+              >
+                scp
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-75"
+            class="collapse"
+            aria-labelledby="heading-75"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Secure copy (remote file copy
+                program).
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >scp file.txt username@hostname:/remote/directory</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('scp file.txt username@hostname:/remote/directory')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-76">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-76"
+                aria-expanded="false"
+                aria-controls="collapse-76"
+              >
+                wget
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-76"
+            class="collapse"
+            aria-labelledby="heading-76"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> The non-interactive network
+                downloader.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >wget https://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('wget https://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-77">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-77"
+                aria-expanded="false"
+                aria-controls="collapse-77"
+              >
+                curl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-77"
+            class="collapse"
+            aria-labelledby="heading-77"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Transfer data from or to a server.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >curl -O https://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('curl -O https://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-78">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-78"
+                aria-expanded="false"
+                aria-controls="collapse-78"
+              >
+                grep
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-78"
+            class="collapse"
+            aria-labelledby="heading-78"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Print lines matching a pattern.</p>
+              <div class="command">
+                <code class="command-code">grep 'pattern' file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('grep \'pattern\' file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-79">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-79"
+                aria-expanded="false"
+                aria-controls="collapse-79"
+              >
+                sed
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-79"
+            class="collapse"
+            aria-labelledby="heading-79"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Stream editor for filtering and
+                transforming text.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >sed 's/search/replace/g' file.txt</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sed \'s/search/replace/g\' file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-80">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-80"
+                aria-expanded="false"
+                aria-controls="collapse-80"
+              >
+                awk
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-80"
+            class="collapse"
+            aria-labelledby="heading-80"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Pattern scanning and processing
+                language.
+              </p>
+              <div class="command">
+                <code class="command-code">awk '{print $1}' file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('awk \'{print $1}\' file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- End of commands -->
+        <!-- Add these commands after the previous set in the accordion -->
+
+        <div class="card">
+          <div class="card-header" id="heading-81">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-81"
+                aria-expanded="false"
+                aria-controls="collapse-81"
+              >
+                chmod
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-81"
+            class="collapse"
+            aria-labelledby="heading-81"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Change file mode bits (permissions).
+              </p>
+              <div class="command">
+                <code class="command-code">chmod 755 file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('chmod 755 file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-82">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-82"
+                aria-expanded="false"
+                aria-controls="collapse-82"
+              >
+                chown
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-82"
+            class="collapse"
+            aria-labelledby="heading-82"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Change file owner and group.</p>
+              <div class="command">
+                <code class="command-code">chown user:group file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('chown user:group file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-83">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-83"
+                aria-expanded="false"
+                aria-controls="collapse-83"
+              >
+                tar
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-83"
+            class="collapse"
+            aria-labelledby="heading-83"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Archive files into a tarball.</p>
+              <div class="command">
+                <code class="command-code"
+                  >tar -cvf archive.tar file1 file2</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('tar -cvf archive.tar file1 file2')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-84">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-84"
+                aria-expanded="false"
+                aria-controls="collapse-84"
+              >
+                gzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-84"
+            class="collapse"
+            aria-labelledby="heading-84"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Compress files using gzip
+                compression.
+              </p>
+              <div class="command">
+                <code class="command-code">gzip file.txt</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('gzip file.txt')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-85">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-85"
+                aria-expanded="false"
+                aria-controls="collapse-85"
+              >
+                gunzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-85"
+            class="collapse"
+            aria-labelledby="heading-85"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Decompress files compressed with
+                gzip.
+              </p>
+              <div class="command">
+                <code class="command-code">gunzip file.txt.gz</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('gunzip file.txt.gz')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-86">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-86"
+                aria-expanded="false"
+                aria-controls="collapse-86"
+              >
+                zip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-86"
+            class="collapse"
+            aria-labelledby="heading-86"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Package and compress (archive) files.
+              </p>
+              <div class="command">
+                <code class="command-code">zip archive.zip file1 file2</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('zip archive.zip file1 file2')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-87">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-87"
+                aria-expanded="false"
+                aria-controls="collapse-87"
+              >
+                unzip
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-87"
+            class="collapse"
+            aria-labelledby="heading-87"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Extract compressed files in a ZIP
+                archive.
+              </p>
+              <div class="command">
+                <code class="command-code">unzip archive.zip</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('unzip archive.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-88">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-88"
+                aria-expanded="false"
+                aria-controls="collapse-88"
+              >
+                top
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-88"
+            class="collapse"
+            aria-labelledby="heading-88"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Display Linux tasks.</p>
+              <div class="command">
+                <code class="command-code">top</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('top')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-89">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-89"
+                aria-expanded="false"
+                aria-controls="collapse-89"
+              >
+                ps
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-89"
+            class="collapse"
+            aria-labelledby="heading-89"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Report a snapshot of current
+                processes.
+              </p>
+              <div class="command">
+                <code class="command-code">ps aux</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ps aux')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-90">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-90"
+                aria-expanded="false"
+                aria-controls="collapse-90"
+              >
+                kill
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-90"
+            class="collapse"
+            aria-labelledby="heading-90"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Send a signal to terminate processes.
+              </p>
+              <div class="command">
+                <code class="command-code">kill PID</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('kill PID')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-91">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-91"
+                aria-expanded="false"
+                aria-controls="collapse-91"
+              >
+                df
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-91"
+            class="collapse"
+            aria-labelledby="heading-91"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Report file system disk space usage.
+              </p>
+              <div class="command">
+                <code class="command-code">df -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('df -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-92">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-92"
+                aria-expanded="false"
+                aria-controls="collapse-92"
+              >
+                du
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-92"
+            class="collapse"
+            aria-labelledby="heading-92"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Estimate file space usage.</p>
+              <div class="command">
+                <code class="command-code">du -h</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('du -h')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-93">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-93"
+                aria-expanded="false"
+                aria-controls="collapse-93"
+              >
+                ifconfig
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-93"
+            class="collapse"
+            aria-labelledby="heading-93"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Configure a network interface.</p>
+              <div class="command">
+                <code class="command-code">ifconfig</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ifconfig')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-94">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-94"
+                aria-expanded="false"
+                aria-controls="collapse-94"
+              >
+                netstat
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-94"
+            class="collapse"
+            aria-labelledby="heading-94"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Print network connections, routing
+                tables, interface statistics, masquerade connections, and
+                multicast memberships.
+              </p>
+              <div class="command">
+                <code class="command-code">netstat -an</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('netstat -an')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-95">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-95"
+                aria-expanded="false"
+                aria-controls="collapse-95"
+              >
+                route
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-95"
+            class="collapse"
+            aria-labelledby="heading-95"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Show/manipulate the IP routing table.
+              </p>
+              <div class="command">
+                <code class="command-code">route -n</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('route -n')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-96">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-96"
+                aria-expanded="false"
+                aria-controls="collapse-96"
+              >
+                iptables
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-96"
+            class="collapse"
+            aria-labelledby="heading-96"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Administration tool for IPv4 packet
+                filtering and NAT.
+              </p>
+              <div class="command">
+                <code class="command-code">iptables -L</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('iptables -L')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-97">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-97"
+                aria-expanded="false"
+                aria-controls="collapse-97"
+              >
+                systemctl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-97"
+            class="collapse"
+            aria-labelledby="heading-97"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Control the systemd system and
+                service manager.
+              </p>
+              <div class="command">
+                <code class="command-code">systemctl start nginx</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('systemctl start nginx')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-98">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-98"
+                aria-expanded="false"
+                aria-controls="collapse-98"
+              >
+                journalctl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-98"
+            class="collapse"
+            aria-labelledby="heading-98"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Query and display messages from the
+                journal.
+              </p>
+              <div class="command">
+                <code class="command-code">journalctl -u nginx.service</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('journalctl -u nginx.service')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-99">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-99"
+                aria-expanded="false"
+                aria-controls="collapse-99"
+              >
+                crontab
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-99"
+            class="collapse"
+            aria-labelledby="heading-99"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Schedule cron jobs.</p>
+              <div class="command">
+                <code class="command-code">crontab -e</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('crontab -e')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-100">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-100"
+                aria-expanded="false"
+                aria-controls="collapse-100"
+              >
+                useradd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-100"
+            class="collapse"
+            aria-labelledby="heading-100"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Create a new user or update default
+                new user information.
+              </p>
+              <div class="command">
+                <code class="command-code">useradd -m username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('useradd -m username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-101">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-101"
+                aria-expanded="false"
+                aria-controls="collapse-101"
+              >
+                usermod
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-101"
+            class="collapse"
+            aria-labelledby="heading-101"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Modify a user account.</p>
+              <div class="command">
+                <code class="command-code">usermod -aG groupname username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('usermod -aG groupname username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-102">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-102"
+                aria-expanded="false"
+                aria-controls="collapse-102"
+              >
+                userdel
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-102"
+            class="collapse"
+            aria-labelledby="heading-102"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Delete a user account.</p>
+              <div class="command">
+                <code class="command-code">userdel -r username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('userdel -r username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-103">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-103"
+                aria-expanded="false"
+                aria-controls="collapse-103"
+              >
+                passwd
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-103"
+            class="collapse"
+            aria-labelledby="heading-103"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Change user password.</p>
+              <div class="command">
+                <code class="command-code">passwd username</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('passwd username')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-104">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-104"
+                aria-expanded="false"
+                aria-controls="collapse-104"
+              >
+                sudo
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-104"
+            class="collapse"
+            aria-labelledby="heading-104"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Execute a command as another user.
+              </p>
+              <div class="command">
+                <code class="command-code">sudo command</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('sudo command')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-105">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-105"
+                aria-expanded="false"
+                aria-controls="collapse-105"
+              >
+                ssh
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-105"
+            class="collapse"
+            aria-labelledby="heading-105"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> OpenSSH SSH client (remote login
+                program).
+              </p>
+              <div class="command">
+                <code class="command-code">ssh username@hostname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ssh username@hostname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-106">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-106"
+                aria-expanded="false"
+                aria-controls="collapse-106"
+              >
+                scp
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-106"
+            class="collapse"
+            aria-labelledby="heading-106"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Securely copy files between hosts on
+                a network.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >scp file.txt username@hostname:/remote/directory</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('scp file.txt username@hostname:/remote/directory')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-107">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-107"
+                aria-expanded="false"
+                aria-controls="collapse-107"
+              >
+                rsync
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-107"
+            class="collapse"
+            aria-labelledby="heading-107"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Remote file and directory
+                synchronization.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >rsync -avz source/ destination/</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('rsync -avz source/ destination/')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-108">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-108"
+                aria-expanded="false"
+                aria-controls="collapse-108"
+              >
+                wget
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-108"
+            class="collapse"
+            aria-labelledby="heading-108"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Retrieve content from web servers.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >wget http://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('wget http://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-109">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-109"
+                aria-expanded="false"
+                aria-controls="collapse-109"
+              >
+                curl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-109"
+            class="collapse"
+            aria-labelledby="heading-109"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Transfer data from or to a server.
+              </p>
+              <div class="command">
+                <code class="command-code"
+                  >curl -O http://example.com/file.zip</code
+                >
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('curl -O http://example.com/file.zip')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-110">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-110"
+                aria-expanded="false"
+                aria-controls="collapse-110"
+              >
+                ping
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-110"
+            class="collapse"
+            aria-labelledby="heading-110"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> Test the reachability of a host.</p>
+              <div class="command">
+                <code class="command-code">ping hostname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('ping hostname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-111">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-111"
+                aria-expanded="false"
+                aria-controls="collapse-111"
+              >
+                traceroute
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-111"
+            class="collapse"
+            aria-labelledby="heading-111"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Print the route packets take to a
+                network host.
+              </p>
+              <div class="command">
+                <code class="command-code">traceroute hostname</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('traceroute hostname')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-112">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-112"
+                aria-expanded="false"
+                aria-controls="collapse-112"
+              >
+                dig
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-112"
+            class="collapse"
+            aria-labelledby="heading-112"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> DNS lookup utility.</p>
+              <div class="command">
+                <code class="command-code">dig example.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('dig example.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-113">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-113"
+                aria-expanded="false"
+                aria-controls="collapse-113"
+              >
+                host
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-113"
+            class="collapse"
+            aria-labelledby="heading-113"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p><strong>Function:</strong> DNS lookup utility.</p>
+              <div class="command">
+                <code class="command-code">host example.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('host example.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-114">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-114"
+                aria-expanded="false"
+                aria-controls="collapse-114"
+              >
+                nslookup
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-114"
+            class="collapse"
+            aria-labelledby="heading-114"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Query Internet name servers
+                interactively.
+              </p>
+              <div class="command">
+                <code class="command-code">nslookup example.com</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('nslookup example.com')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header" id="heading-115">
+            <h2 class="mb-0">
+              <button
+                class="btn btn-link collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapse-115"
+                aria-expanded="false"
+                aria-controls="collapse-115"
+              >
+                systemctl
+              </button>
+            </h2>
+          </div>
+          <div
+            id="collapse-115"
+            class="collapse"
+            aria-labelledby="heading-115"
+            data-parent="#commandsAccordion"
+          >
+            <div class="card-body">
+              <p>
+                <strong>Function:</strong> Control the systemd system and
+                service manager.
+              </p>
+              <div class="command">
+                <code class="command-code">systemctl status nginx</code>
+                <button
+                  class="btn btn-sm btn-outline-secondary copy-button"
+                  onclick="copyToClipboard('systemctl status nginx')"
+                >
+                  Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more commands similarly -->
+      </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(
+          function () {
+            alert("Copied to clipboard");
+          },
+          function (err) {
+            console.error("Could not copy text: ", err);
+          }
+        );
+      }
+    </script>
+  </body>
+</html>

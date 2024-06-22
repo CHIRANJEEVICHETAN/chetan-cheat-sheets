@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Commands Cheat Sheet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .command {
+            display: flex;
+            align-items: center;
+        }
+        .command-code {
+            flex-grow: 1;
+        }
+        .copy-button {
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        .title {
+        text-align: center;
+        color: red;
+        text-decoration: underline;
+      }
+      .container {
+        border: 3px solid grey;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4 text">Git Commands Cheat Sheet</h1>
+        <div class="accordion" id="commandsAccordion">
+
+            <div class="card">
+                <div class="card-header" id="heading-1">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                            git init
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Initializes a new Git repository.</p>
+                        <div class="command">
+                            <code class="command-code">git init</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git init')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-2">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">
+                            git clone
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-2" class="collapse show" aria-labelledby="heading-2" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Clones a repository into a new directory.</p>
+                        <div class="command">
+                            <code class="command-code">git clone https://github.com/user/repo.git</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git clone https://github.com/user/repo.git')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-3">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                            git add
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-3" class="collapse" aria-labelledby="heading-3" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Adds file contents to the index (staging area).</p>
+                        <div class="command">
+                            <code class="command-code">git add filename</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git add filename')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git add .</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git add .')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-4">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+                            git commit
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-4" class="collapse" aria-labelledby="heading-4" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Records changes to the repository.</p>
+                        <div class="command">
+                            <code class="command-code">git commit -m "Commit message"</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git commit -m &quot;Commit message&quot;')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-5">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+                            git status
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-5" class="collapse" aria-labelledby="heading-5" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Displays the state of the working directory and staging area.</p>
+                        <div class="command">
+                            <code class="command-code">git status</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git status')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-6">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+                            git push
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-6" class="collapse" aria-labelledby="heading-6" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Updates remote refs along with associated objects.</p>
+                        <div class="command">
+                            <code class="command-code">git push origin main</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git push origin main')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-7">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+                            git pull
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-7" class="collapse" aria-labelledby="heading-7" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Fetches from and integrates with another repository or a local branch.</p>
+                        <div class="command">
+                            <code class="command-code">git pull origin main</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git pull origin main')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-8">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+                            git fetch
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-8" class="collapse" aria-labelledby="heading-8" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Downloads objects and refs from another repository.</p>
+                        <div class="command">
+                            <code class="command-code">git fetch origin</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git fetch origin')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-9">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+                            git merge
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-9" class="collapse" aria-labelledby="heading-9" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Joins two or more development histories together.</p>
+                        <div class="command">
+                            <code class="command-code">git merge branch-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git merge branch-name')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-10">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+                            git branch
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-10" class="collapse" aria-labelledby="heading-10" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Lists, creates, or deletes branches.</p>
+                        <div class="command">
+                            <code class="command-code">git branch</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git branch')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git branch branch-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git branch branch-name')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git branch -d branch-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git branch -d branch-name')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-11">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-11" aria-expanded="false" aria-controls="collapse-11">
+                            git checkout
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-11" class="collapse" aria-labelledby="heading-11" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Switches branches or restores working tree files.</p>
+                        <div class="command">
+                            <code class="command-code">git checkout branch-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git checkout branch-name')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git checkout -b new-branch-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git checkout -b new-branch-name')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-12">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
+                            git log
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-12" class="collapse" aria-labelledby="heading-12" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows the commit logs.</p>
+                        <div class="command">
+                            <code class="command-code">git log</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git log')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-13">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-13" aria-expanded="false" aria-controls="collapse-13">
+                            git show
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-13" class="collapse" aria-labelledby="heading-13" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows various types of objects.</p>
+                        <div class="command">
+                            <code class="command-code">git show commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git show commit-hash')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-14">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-14" aria-expanded="false" aria-controls="collapse-14">
+                            git diff
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-14" class="collapse" aria-labelledby="heading-14" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows changes between commits, commit and working tree, etc.</p>
+                        <div class="command">
+                            <code class="command-code">git diff</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git diff')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-15">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-15" aria-expanded="false" aria-controls="collapse-15">
+                            git reset
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-15" class="collapse" aria-labelledby="heading-15" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Resets current HEAD to the specified state.</p>
+                        <div class="command">
+                            <code class="command-code">git reset --hard HEAD</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset --hard HEAD')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git reset --soft HEAD~1</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset --soft HEAD~1')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-16">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-16" aria-expanded="false" aria-controls="collapse-16">
+                            git rm
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-16" class="collapse" aria-labelledby="heading-16" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Removes files from the working tree and from the index.</p>
+                        <div class="command">
+                            <code class="command-code">git rm filename</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rm filename')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git rm --cached filename</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rm --cached filename')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-17">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-17" aria-expanded="false" aria-controls="collapse-17">
+                            git stash
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-17" class="collapse" aria-labelledby="heading-17" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Stashes the changes in a dirty working directory away.</p>
+                        <div class="command">
+                            <code class="command-code">git stash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash pop</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash pop')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash apply</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash apply')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-18">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-18" aria-expanded="false" aria-controls="collapse-18">
+                            git tag
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-18" class="collapse" aria-labelledby="heading-18" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Creates, lists, deletes or verifies a tag object signed with GPG.</p>
+                        <div class="command">
+                            <code class="command-code">git tag tag-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git tag tag-name')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git tag -d tag-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git tag -d tag-name')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git tag -a tag-name -m "message"</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git tag -a tag-name -m &quot;message&quot;')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-19">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-19" aria-expanded="false" aria-controls="collapse-19">
+                            git remote
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-19" class="collapse" aria-labelledby="heading-19" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Manages set of tracked repositories.</p>
+                        <div class="command">
+                            <code class="command-code">git remote -v</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git remote -v')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git remote add origin https://github.com/user/repo.git</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git remote add origin https://github.com/user/repo.git')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git remote rm origin</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git remote rm origin')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-20">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-20" aria-expanded="false" aria-controls="collapse-20">
+                            git reflog
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-20" class="collapse" aria-labelledby="heading-20" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows the history of all commits.</p>
+                        <div class="command">
+                            <code class="command-code">git reflog</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reflog')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-21">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-21" aria-expanded="false" aria-controls="collapse-21">
+                            git log --oneline
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-21" class="collapse" aria-labelledby="heading-21" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows the commit logs in one line each.</p>
+                        <div class="command">
+                            <code class="command-code">git log --oneline</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git log --oneline')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-22">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-22" aria-expanded="false" aria-controls="collapse-22">
+                            git log --graph
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-22" class="collapse" aria-labelledby="heading-22" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows the commit logs with a graph.</p>
+                        <div class="command">
+                            <code class="command-code">git log --graph</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git log --graph')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-23">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-23" aria-expanded="false" aria-controls="collapse-23">
+                            git reset
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-23" class="collapse" aria-labelledby="heading-23" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Resets current HEAD to the specified state.</p>
+                        <div class="command">
+                            <code class="command-code">git reset HEAD file</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset HEAD file')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git reset --hard HEAD~1</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset --hard HEAD~1')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-24">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-24" aria-expanded="false" aria-controls="collapse-24">
+                            git cherry-pick
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-24" class="collapse" aria-labelledby="heading-24" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Apply the changes introduced by some existing commits.</p>
+                        <div class="command">
+                            <code class="command-code">git cherry-pick commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git cherry-pick commit-hash')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-25">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-25" aria-expanded="false" aria-controls="collapse-25">
+                            git bisect
+                        </button>
+                    </h2>
+                                </div>
+                <div id="collapse-25" class="collapse" aria-labelledby="heading-25" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Uses binary search to find the commit that introduced a bug.</p>
+                        <div class="command">
+                            <code class="command-code">git bisect start</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git bisect start')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git bisect bad</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git bisect bad')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git bisect good commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git bisect good commit-hash')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git bisect reset</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git bisect reset')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-26">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-26" aria-expanded="false" aria-controls="collapse-26">
+                            git grep
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-26" class="collapse" aria-labelledby="heading-26" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Prints lines matching a pattern.</p>
+                        <div class="command">
+                            <code class="command-code">git grep "pattern"</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git grep &quot;pattern&quot;')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-27">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-27" aria-expanded="false" aria-controls="collapse-27">
+                            git archive
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-27" class="collapse" aria-labelledby="heading-27" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Creates an archive of files from a named tree.</p>
+                        <div class="command">
+                            <code class="command-code">git archive --format=zip HEAD > archive.zip</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git archive --format=zip HEAD > archive.zip')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-28">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-28" aria-expanded="false" aria-controls="collapse-28">
+                            git fsck
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-28" class="collapse" aria-labelledby="heading-28" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Verifies the connectivity and validity of objects in the database.</p>
+                        <div class="command">
+                            <code class="command-code">git fsck</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git fsck')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-29">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-29" aria-expanded="false" aria-controls="collapse-29">
+                            git gc
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-29" class="collapse" aria-labelledby="heading-29" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Optimizes the repository by cleaning up unnecessary files and optimizing the local repository.</p>
+                        <div class="command">
+                            <code class="command-code">git gc</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git gc')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git gc --aggressive</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git gc --aggressive')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-30">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-30" aria-expanded="false" aria-controls="collapse-30">
+                            git init --bare
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-30" class="collapse" aria-labelledby="heading-30" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Creates a bare repository.</p>
+                        <div class="command">
+                            <code class="command-code">git init --bare</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git init --bare')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards for the remaining commands as needed -->
+
+            <div class="card">
+                <div class="card-header" id="heading-31">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-31" aria-expanded="false" aria-controls="collapse-31">
+                            git shortlog
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-31" class="collapse" aria-labelledby="heading-31" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Summarizes git log output in a format suitable for release notes.</p>
+                        <div class="command">
+                            <code class="command-code">git shortlog</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git shortlog')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-32">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-32" aria-expanded="false" aria-controls="collapse-32">
+                            git revert
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-32" class="collapse" aria-labelledby="heading-32" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Creates a new commit that undoes the changes made by an earlier commit.</p>
+                        <div class="command">
+                            <code class="command-code">git revert commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git revert commit-hash')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-33">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-33" aria-expanded="false" aria-controls="collapse-33">
+                            git clean
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-33" class="collapse" aria-labelledby="heading-33" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Removes untracked files from the working tree.</p>
+                        <div class="command">
+                            <code class="command-code">git clean -f</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git clean -f')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git clean -fd</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git clean -fd')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-34">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-34" aria-expanded="false" aria-controls="collapse-34">
+                            git rebase
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-34" class="collapse" aria-labelledby="heading-34" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Reapply commits on top of another base tip.</p>
+                        <div class="command">
+                            <code class="command-code">git rebase branch</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rebase branch')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git rebase --onto newbase oldbase</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rebase --onto newbase oldbase')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git rebase --abort</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rebase --abort')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git rebase --continue</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rebase --continue')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-35">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-35" aria-expanded="false" aria-controls="collapse-35">
+                            git diff --cached
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-35" class="collapse" aria-labelledby="heading-35" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows changes between the index and the last commit.</p>
+                        <div class="command">
+                            <code class="command-code">git diff --cached</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git diff --cached')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-36">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-36" aria-expanded="false" aria-controls="collapse-36">
+                            git reset --soft
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-36" class="collapse" aria-labelledby="heading-36" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Resets HEAD to a specific commit, but leaves the index and working tree as they are.</p>
+                        <div class="command">
+                            <code class="command-code">git reset --soft HEAD~1</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset --soft HEAD~1')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-37">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-37" aria-expanded="false" aria-controls="collapse-37">
+                            git reset --mixed
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-37" class="collapse" aria-labelledby="heading-37" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Resets HEAD and index to a specific commit, but leaves the working tree as it is.</p>
+                        <div class="command">
+                            <code class="command-code">git reset --mixed HEAD~1</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reset --mixed HEAD~1')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-38">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-38" aria-expanded="false" aria-controls="collapse-38">
+                            git blame
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-38" class="collapse" aria-labelledby="heading-38" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows what revision and author last modified each line of a file.</p>
+                        <div class="command">
+                            <code class="command-code">git blame filename</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git blame filename')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-39">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-39" aria-expanded="false" aria-controls="collapse-39">
+                            git show
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-39" class="collapse" aria-labelledby="heading-39" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows various types of objects.</p>
+                        <div class="command">
+                            <code class="command-code">git show commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git show commit-hash')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-40">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-40" aria-expanded="false" aria-controls="collapse-40">
+                            git describe
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-40" class="collapse" aria-labelledby="heading-40" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Gives an object name based on an available ref.</p>
+                        <div class="command">
+                            <code class="command-code">git describe</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git describe')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header" id="heading-41">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-41" aria-expanded="false" aria-controls="collapse-41">
+                            git stash list
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-41" class="collapse" aria-labelledby="heading-41" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Lists all stashes in the stash list.</p>
+                        <div class="command">
+                            <code class="command-code">git stash list</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash list')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-42">
+                    <h2 class="mb-0">
+                                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-42" aria-expanded="false" aria-controls="collapse-42">
+                            git stash show
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-42" class="collapse" aria-labelledby="heading-42" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows the changes recorded in the stash as a diff.</p>
+                        <div class="command">
+                            <code class="command-code">git stash show</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash show')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash show -p</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash show -p')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-43">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-43" aria-expanded="false" aria-controls="collapse-43">
+                            git stash apply
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-43" class="collapse" aria-labelledby="heading-43" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Applies a stash to the working directory.</p>
+                        <div class="command">
+                            <code class="command-code">git stash apply</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash apply')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash apply stash@{0}</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash apply stash@{0}')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-44">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-44" aria-expanded="false" aria-controls="collapse-44">
+                            git stash pop
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-44" class="collapse" aria-labelledby="heading-44" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Applies a stash and removes it from the stash list.</p>
+                        <div class="command">
+                            <code class="command-code">git stash pop</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash pop')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash pop stash@{0}</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash pop stash@{0}')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-45">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-45" aria-expanded="false" aria-controls="collapse-45">
+                            git stash drop
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-45" class="collapse" aria-labelledby="heading-45" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Removes a single stash from the stash list.</p>
+                        <div class="command">
+                            <code class="command-code">git stash drop</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash drop')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git stash drop stash@{0}</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash drop stash@{0}')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-46">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-46" aria-expanded="false" aria-controls="collapse-46">
+                            git stash clear
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-46" class="collapse" aria-labelledby="heading-46" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Removes all stashes from the stash list.</p>
+                        <div class="command">
+                            <code class="command-code">git stash clear</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git stash clear')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-47">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-47" aria-expanded="false" aria-controls="collapse-47">
+                            git reflog
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-47" class="collapse" aria-labelledby="heading-47" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows a log of changes to the local repository's refs.</p>
+                        <div class="command">
+                            <code class="command-code">git reflog</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git reflog')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-48">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-48" aria-expanded="false" aria-controls="collapse-48">
+                            git ls-files
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-48" class="collapse" aria-labelledby="heading-48" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows information about files in the index and the working directory.</p>
+                        <div class="command">
+                            <code class="command-code">git ls-files</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git ls-files')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git ls-files -s</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git ls-files -s')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git ls-files -u</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git ls-files -u')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-49">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-49" aria-expanded="false" aria-controls="collapse-49">
+                            git symbolic-ref
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-49" class="collapse" aria-labelledby="heading-49" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Reads and modifies symbolic refs.</p>
+                        <div class="command">
+                            <code class="command-code">git symbolic-ref HEAD refs/heads/branch</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git symbolic-ref HEAD refs/heads/branch')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-50">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-50" aria-expanded="false" aria-controls="collapse-50">
+                            git cat-file
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-50" class="collapse" aria-labelledby="heading-50" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Provide content or type and size information for repository objects.</p>
+                        <div class="command">
+                            <code class="command-code">git cat-file -p commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git cat-file -p commit-hash')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git cat-file -t commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git cat-file -t commit-hash')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git cat-file -s commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git cat-file -s commit-hash')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-51">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-51" aria-expanded="false" aria-controls="collapse-51">
+                            git apply
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-51" class="collapse" aria-labelledby="heading-51" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Applies a patch to files and/or to the index.</p>
+                        <div class="command">
+                            <code class="command-code">git apply patch-file.patch</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git apply patch-file.patch')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git apply --index patch-file.patch</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git apply --index patch-file.patch')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-52">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-52" aria-expanded="false" aria-controls="collapse-52">
+                            git am
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-52" class="collapse" aria-labelledby="heading-52" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Applies a series of patches from a mailbox.</p>
+                        <div class="command">
+                            <code class="command-code">git am patch.mbox</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git am patch.mbox')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-53">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-53" aria-expanded="false" aria-controls="collapse-53">
+                            git prune
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-53" class="collapse" aria-labelledby="heading-53" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Prunes all unreachable objects from the object database.</p>
+                        <div class="command">
+                            <code class="command-code">git prune</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git prune')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-54">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-54" aria-expanded="false" aria-controls="collapse-54">
+                            git p4
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-54" class="collapse" aria-labelledby="heading-54" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Integrates Perforce branches with Git.</p>
+                        <div class="command">
+                            <code class="command-code">git p4 clone //depot/path@all</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git p4 clone //depot/path@all')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-55">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-55" aria-expanded="false" aria-controls="collapse-55">
+                            git svn
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-55" class="collapse" aria-labelledby="heading-55" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Provides a bidirectional bridge between a Subversion repository and Git.</p>
+                        <div class="command">
+                            <code class="command-code">git svn clone svn-repo-url</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git svn clone svn-repo-url')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-56">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-56" aria-expanded="false" aria-controls="collapse-56">
+                            git instaweb
+                        </button>
+                                            </h2>
+                </div>
+                <div id="collapse-56" class="collapse" aria-labelledby="heading-56" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Instantly browse your working repository in gitweb.</p>
+                        <div class="command">
+                            <code class="command-code">git instaweb [--httpd=webrick|builtin]</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git instaweb [--httpd=webrick|builtin]')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-57">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-57" aria-expanded="false" aria-controls="collapse-57">
+                            git verify-tag
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-57" class="collapse" aria-labelledby="heading-57" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Verifies the gpg signature of tags.</p>
+                        <div class="command">
+                            <code class="command-code">git verify-tag tag-name</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git verify-tag tag-name')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-58">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-58" aria-expanded="false" aria-controls="collapse-58">
+                            git ls-remote
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-58" class="collapse" aria-labelledby="heading-58" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Shows references in a remote repository.</p>
+                        <div class="command">
+                            <code class="command-code">git ls-remote</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git ls-remote')">Copy</button>
+                        </div>
+                        <div class="command">
+                            <code class="command-code">git ls-remote origin</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git ls-remote origin')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-59">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-59" aria-expanded="false" aria-controls="collapse-59">
+                            git notes
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-59" class="collapse" aria-labelledby="heading-59" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Adds, removes, or reads notes attached to objects.</p>
+                        <div class="command">
+                            <code class="command-code">git notes add -m "Note message" commit-hash</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git notes add -m commit-message')"">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="heading-60">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse-60" aria-expanded="false" aria-controls="collapse-60">
+                            git rerere
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse-60" class="collapse" aria-labelledby="heading-60" data-parent="#commandsAccordion">
+                    <div class="card-body">
+                        <p><strong>Function:</strong> Reuses recorded resolution of conflicted merges.</p>
+                        <div class="command">
+                            <code class="command-code">git rerere</code>
+                            <button class="btn btn-sm btn-outline-secondary copy-button" onclick="copyToClipboard('git rerere')">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copied to clipboard');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
